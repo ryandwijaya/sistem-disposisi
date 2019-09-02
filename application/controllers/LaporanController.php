@@ -19,8 +19,15 @@ class LaporanController extends CI_Controller
     public function index()
     {
     	$tgl = $this->input->post('tgl_surat');
+    	$key = $this->input->post('key');
+    	$berdasarkan = $this->input->post('berdasarkan');
     	$data['breadcumb'] = 'Laporan';
-        $data['laporan'] = $this->SMasukModel->get_surat_by_tgl($tgl);
+    	if ($key==NULL){
+            $data['laporan'] = $this->SMasukModel->getSurat();
+        }else{
+            $data['laporan'] = $this->SMasukModel->getSuratBerdasarkan($berdasarkan,$key);
+        }
+
         $this->load->view('templates/header',$data);
         $this->load->view('backend/laporan/index',$data);
         $this->load->view('templates/footer');

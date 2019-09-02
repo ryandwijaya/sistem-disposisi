@@ -22,6 +22,12 @@ class SMasukModel extends CI_Model{
         $query = $this->db->get('disposisi_surat');
         return $query->result_array();
     }
+    function getSuratBerdasarkan($berdasarkan,$key){
+        $this->db->like($berdasarkan, $key, 'both');
+        $this->db->order_by('surat_date_created','DESC');
+        $query = $this->db->get('disposisi_surat');
+        return $query->result_array();
+    }
     
     function getSuratById($id){
         $this->db->where('surat_id',$id);
