@@ -8,9 +8,9 @@
                 <form action="<?= base_url() ?>laporan" method="POST">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="form-group">
+                            <div class="form-group" id="okelah">
                                 <label>Cari</label>
-                                <input type="text" name="key" placeholder="keyword" class="form-control">
+                                <input type="text" name="key" id="keyword" placeholder="keyword" class="form-control">
                                 <!--                            <label>Tanggal</label>-->
                                 <!--                            <input type="date" name="tgl_surat" class="form-control">-->
                             </div>
@@ -18,10 +18,11 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Berdasarkan</label>
-                                <select name="berdasarkan" class="form-control" required>
+                                <select name="berdasarkan" id="pilihan" class="form-control" required>
                                     <option selected disabled>- Silahkan Pilih -</option>
                                     <option value="surat_perihal">Perihal</option>
                                     <option value="surat_nomor">Nomor Surat</option>
+                                    <option value="surat_tgl">Tanggal</option>
                                 </select>
                             </div>
                         </div>
@@ -100,3 +101,24 @@
         </div>
     </div>
 </div>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+
+
+        $('#pilihan').change(function () {
+            var pilih = $(this).val();
+            var html = '';
+            if (pilih == 'surat_tgl'){
+                html += '<label>Cari</label><input type="date" name="key" class="form-control">';
+                $('#okelah').html(html);
+            }
+
+        });
+
+    });
+
+</script>

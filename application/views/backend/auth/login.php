@@ -3,16 +3,16 @@
 
 
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-<title>Login</title>
-<!-- Favicon-->
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<!-- Custom Css -->
-<link rel="stylesheet" href="<?php echo base_url() ?>assets/templates/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="<?php echo base_url() ?>assets/templates/css/style.min.css">    
+    <title>Login</title>
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/templates/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/templates/css/style.min.css">
 </head>
 
 <body class="theme-blush">
@@ -35,20 +35,23 @@
                         </div>
                         <div class="input-group mb-3">
                             <input type="password" class="form-control" placeholder="Masukkan Password" name="password">
-                            <div class="input-group-append">                                
+                            <div class="input-group-append">
                                 <span class="input-group-text"><i class="zmdi zmdi-lock"></i></span>
-                            </div>                            
+                            </div>
                         </div>
-                        
-                        <button class="btn btn-primary btn-block waves-effect waves-light" type="submit" name="login">SIGN IN</button>                        
-                        
+
+                        <button class="btn btn-primary btn-block waves-effect waves-light" type="submit" name="login">
+                            SIGN IN
+                        </button>
+
                     </div>
                 </form>
-                
+
             </div>
             <div class="col-lg-8 col-sm-12">
                 <div class="card text-right">
-                    <img src="<?php echo base_url() ?>assets/images/logo.png" alt="Sign In" width="400px" heigth="400px"/>
+                    <img src="<?php echo base_url() ?>assets/images/logo.png" alt="Sign In" width="400px"
+                         heigth="400px"/>
                 </div>
             </div>
         </div>
@@ -57,7 +60,8 @@
 
 <!-- Jquery Core Js -->
 <script src="<?php echo base_url() ?>assets/templates/bundles/libscripts.bundle.js"></script>
-<script src="<?php echo base_url() ?>assets/templates/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+<script src="<?php echo base_url() ?>assets/templates/bundles/vendorscripts.bundle.js"></script>
+<!-- Lib Scripts Plugin Js -->
 </body>
 
 
