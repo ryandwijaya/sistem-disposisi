@@ -115,6 +115,10 @@
             if (pilih == 'surat_tgl'){
                 html += '<label>Cari</label><input type="date" name="key" class="form-control">';
                 $('#okelah').html(html);
+            }else{
+                html += '<label>Cari</label><input type="text" name="key" class="form-control">';
+                $('#okelah').html(html);
+
             }
 
         });
